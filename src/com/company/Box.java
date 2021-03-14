@@ -28,17 +28,18 @@ public class Box {
         }
     }
         public void  setMaterial(MaterialBox  material) {
-        this.material = material;
+            this.material = material;
+
+    }
+        public MaterialBox getMaterial() {
+                return material;
     }
 
-    public int getHeight() {
+
+        public int getHeight() {
         return height;
     }
 
-
-    public MaterialBox getMaterial() {
-        return material;
-    }
 
     public void setHeight(int height) {
         if (height <= 0) {

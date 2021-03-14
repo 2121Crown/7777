@@ -1,12 +1,10 @@
 package com.company;
 
 
-
-
 public class Main {
     public static void main(String[] args) {
 
-        ColorBox ColorBox = new ColorBox(Color.RED);
+        ColorBox ColorBox = new ColorBox(1,2,4, MaterialBox.METALL,Color.RED);
 
         Box Box  = new Box ( -2, 5, 2);
         Box Box1 = new Box ( -2, 5, 2);
@@ -19,6 +17,11 @@ public class Main {
         Box1.setHeight(-5);
         Box1.setIsLong(1);
         Box1.setWidth(1);
+        Box1.setMaterial(MaterialBox.METALL);
+
+        ColorBox.setColor(Color.WHITE);
+
+        ColorBox.setMaterial(MaterialBox.PAPER);
 
         System.out.println(ColorBox);
 
@@ -33,13 +36,12 @@ public class Main {
         System.out.println(Box5.getValue());
 
         System.out.println("Объём " + Box1.getValue() + " л");
-        System.out.println("Цвет и материал коробки: " + ColorBox +" , " + Box1.getMaterial());
+        System.out.println("Цвет и материал коробки: " + ColorBox.getColor() +" , " + ColorBox.getMaterial());
 
         System.out.println("Объём " + Box3.getValue() + " л");
-        System.out.println("Цвет и материал коробки: " + ColorBox +" , " + Box3.getMaterial());
+        System.out.println("Цвет и материал коробки: " + ColorBox);
 
-        System.out.println("Объём " + Box.getValue() + " л");
-        System.out.println("Цвет и материал коробки: " + ColorBox +" , " + Box.getMaterial());
+
 
     }
 }
